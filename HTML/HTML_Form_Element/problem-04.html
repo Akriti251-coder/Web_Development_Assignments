@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Aviverse - Employee Leave Request</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Aviverse</h1>
+        <h2>Employee Leave Request Form</h2>
+
+        <p>
+            Welcome to Aviverse's Employee Leave Request Portal.
+            Employees can submit leave requests by providing their
+            employee details, leave type, dates, reason and contact information.
+        </p>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section>
+            <h2>Submit Your Leave Request</h2>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>Employee Information</legend>
+
+                    <p>
+                        <label for="employeeName">Employee Name:</label><br>
+                        <input type="text"
+                               id="employeeName"
+                               name="employee_name"
+                               placeholder="Enter your full name"
+                               minlength="3"
+                               maxlength="50"
+                               autocomplete="name"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="employeeId">Employee ID:</label><br>
+                        <input type="text"
+                               id="employeeId"
+                               name="employee_id"
+                               placeholder="Example: AVI1025"
+                               minlength="6"
+                               maxlength="10"
+                               pattern="AVI[0-9]{4,7}"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="email">Official Email:</label><br>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="name@aviverse.com"
+                               autocomplete="email"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="department">Department:</label><br>
+                        <select id="department" name="department" required>
+                            <option value="" selected disabled>
+                                -- Select Department --
+                            </option>
+                            <option value="hr">Human Resources</option>
+                            <option value="it">Information Technology</option>
+                            <option value="finance">Finance</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="sales">Sales</option>
+                            <option value="operations">Operations</option>
+                            <option value="research">Research & Development</option>
+                            <option value="customer-support">Customer Support</option>
+                        </select>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Leave Details</legend>
+
+                    <p>
+                        <label for="leaveType">Leave Type:</label><br>
+                        <select id="leaveType" name="leave_type" required>
+                            <option value="" selected disabled>
+                                -- Select Leave Type --
+                            </option>
+                            <option value="casual">Casual Leave</option>
+                            <option value="sick">Sick Leave</option>
+                            <option value="earned">Earned Leave</option>
+                            <option value="wfh">Work From Home</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="startDate">Leave Start Date:</label><br>
+                        <input type="date"
+                               id="startDate"
+                               name="start_date"
+                               min="2026-09-05"
+                               max="2026-12-31"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="endDate">Leave End Date:</label><br>
+                        <input type="date"
+                               id="endDate"
+                               name="end_date"
+                               min="2026-09-05"
+                               max="2026-12-31"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="leaveDays">Number of Leave Days:</label><br>
+                        <input type="number"
+                               id="leaveDays"
+                               name="leave_days"
+                               min="0.5"
+                               max="30"
+                               step="0.5"
+                               placeholder="Enter number of days"
+                               required>
+                    </p>
+
+                    <p>
+                        <strong>Are you reachable during your leave?</strong><br>
+
+                        <input type="radio"
+                               id="reachableYes"
+                               name="reachable"
+                               value="yes"
+                               required>
+                        <label for="reachableYes">Yes</label>
+
+                        <input type="radio"
+                               id="reachableNo"
+                               name="reachable"
+                               value="no">
+                        <label for="reachableNo">No</label>
+                    </p>
+
+                    <p>
+                        <label for="reason">Reason for Leave:</label><br>
+                        <textarea id="reason"
+                                  name="leave_reason"
+                                  rows="6"
+                                  cols="50"
+                                  minlength="10"
+                                  maxlength="500"
+                                  placeholder="Enter the reason for your leave..."
+                                  required></textarea>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <p>
+                        <label for="alternateContact">
+                            Alternate Contact Number:
+                        </label><br>
+
+                        <input type="tel"
+                               id="alternateContact"
+                               name="alternate_contact"
+                               placeholder="Enter 10-digit mobile number"
+                               minlength="10"
+                               maxlength="10"
+                               pattern="[0-9]{10}"
+                               autocomplete="tel"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="supportingDocument">
+                            Supporting Document:
+                        </label><br>
+
+                        <input type="file"
+                               id="supportingDocument"
+                               name="supporting_document"
+                               accept=".pdf,.jpg,.jpeg,.png">
+
+                        <br>
+                        <small>
+                            Optional. Upload PDF, JPG or PNG documents if required.
+                        </small>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Declaration</legend>
+
+                    <p>
+                        <input type="checkbox"
+                               id="declaration"
+                               name="declaration"
+                               value="confirmed"
+                               required>
+
+                        <label for="declaration">
+                            I confirm that the information provided above is
+                            correct and I understand that my leave request
+                            will be subject to Aviverse's leave policy and approval.
+                        </label>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <input type="submit" value="Submit Leave Request">
+
+                <input type="reset" value="Reset Form">
+
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Leave Categories</h2>
+
+            <table border="1">
+                <caption>Example Leave Categories and Descriptions</caption>
+
+                <thead>
+                    <tr>
+                        <th>Leave Category</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Casual Leave</td>
+                        <td>
+                            Short-term leave for personal or unexpected needs.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Sick Leave</td>
+                        <td>
+                            Leave taken when an employee is unwell or needs medical rest.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Earned Leave</td>
+                        <td>
+                            Planned leave accumulated according to company policy.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Work From Home</td>
+                        <td>
+                            Permission to work remotely instead of attending the office.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Other</td>
+                        <td>
+                            Leave for special situations not covered by the above categories.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Aviverse. Employee Leave Management Portal.</p>
+    </footer>
+
+</body>
+
+</html>

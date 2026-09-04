@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GLA University Noida - Admission Application Form</title>
+</head>
+
+<body>
+
+    <h1>GLA University, Noida</h1>
+
+    <p>
+        Welcome to the official admission application form for GLA University, Noida.
+        Prospective students can use this form to provide their personal, academic
+        and course-related information for admission consideration.
+    </p>
+
+    <p>
+        Please fill in all the required details carefully before submitting the form.
+    </p>
+
+    <hr>
+
+    <h2>About GLA University</h2>
+
+    <p>
+        GLA University is a higher education institution offering undergraduate and
+        postgraduate programs in engineering, management, computer applications,
+        sciences and other disciplines.
+    </p>
+
+    <p>
+        Visit the
+        <a href="https://www.gla.ac.in/" target="_blank">
+            official GLA University website
+        </a>
+        for more information about programs and admissions.
+    </p>
+
+    <img src="https://www.gla.ac.in/ccis2024/assets/img/gla_logo.png"
+         alt="GLA University Logo"
+         width="200">
+
+    <hr>
+
+    <h2>Admission Application Form</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <h3>1. Personal Information</h3>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text"
+               id="fullname"
+               name="full_name"
+               placeholder="Enter your full name"
+               minlength="3"
+               maxlength="50"
+               autocomplete="name"
+               required>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date"
+               id="dob"
+               name="date_of_birth"
+               min="1990-01-01"
+               max="2010-12-31"
+               required>
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="example@gmail.com"
+               autocomplete="email"
+               required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel"
+               id="mobile"
+               name="mobile_number"
+               placeholder="10-digit mobile number"
+               pattern="[6-9][0-9]{9}"
+               maxlength="10"
+               minlength="10"
+               autocomplete="tel"
+               required>
+        <br><br>
+
+        <label for="pin">Application PIN:</label>
+        <input type="password"
+               id="pin"
+               name="application_pin"
+               placeholder="Create a 6-digit PIN"
+               minlength="6"
+               maxlength="6"
+               pattern="[0-9]{6}"
+               required>
+        <br><br>
+
+        <h3>2. Gender</h3>
+
+        <input type="radio"
+               id="male"
+               name="gender"
+               value="male"
+               required>
+        <label for="male">Male</label>
+
+        <input type="radio"
+               id="female"
+               name="gender"
+               value="female">
+        <label for="female">Female</label>
+
+        <input type="radio"
+               id="other"
+               name="gender"
+               value="other">
+        <label for="other">Other</label>
+
+        <br><br>
+
+        <h3>3. Category</h3>
+
+        <label for="category">Select Category:</label>
+
+        <select id="category" name="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="general">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="ews">EWS</option>
+        </select>
+
+        <br><br>
+
+        <h3>4. Course / Program</h3>
+
+        <label for="course">Select your preferred program:</label>
+
+        <select id="course" name="preferred_course" required>
+            <option value="">-- Select Program --</option>
+            <option value="btech_cse">B.Tech Computer Science and Engineering</option>
+            <option value="btech_ai">B.Tech Artificial Intelligence</option>
+            <option value="btech_ece">B.Tech Electronics and Communication Engineering</option>
+            <option value="bca">Bachelor of Computer Applications (BCA)</option>
+            <option value="bba">Bachelor of Business Administration (BBA)</option>
+            <option value="bsc">Bachelor of Science (B.Sc.)</option>
+            <option value="mca">Master of Computer Applications (MCA)</option>
+            <option value="mba">Master of Business Administration (MBA)</option>
+        </select>
+
+        <br><br>
+
+        <h3>5. Previous Qualification</h3>
+
+        <label for="qualification">Highest Previous Qualification:</label>
+
+        <select id="qualification"
+                name="previous_qualification"
+                required>
+
+            <option value="">-- Select Qualification --</option>
+            <option value="class_12">Class 12 / Intermediate</option>
+            <option value="diploma">Diploma</option>
+            <option value="graduation">Graduation</option>
+            <option value="other">Other</option>
+
+        </select>
+
+        <br><br>
+
+        <label for="percentage">Percentage / CGPA:</label>
+        <input type="number"
+               id="percentage"
+               name="percentage_cgpa"
+               placeholder="Enter percentage"
+               min="0"
+               max="100"
+               step="0.01"
+               required>
+        <br><br>
+
+        <label for="passing_year">Passing Year:</label>
+        <input type="number"
+               id="passing_year"
+               name="passing_year"
+               min="2000"
+               max="2026"
+               step="1"
+               placeholder="YYYY"
+               required>
+        <br><br>
+
+        <label for="school">School / College Name:</label>
+        <input type="text"
+               id="school"
+               name="previous_institution"
+               placeholder="Enter school or college name"
+               minlength="2"
+               maxlength="100"
+               required>
+        <br><br>
+
+        <h3>6. Subjects / Areas of Interest</h3>
+
+        <p>Select all areas that interest you:</p>
+
+        <input type="checkbox"
+               id="programming"
+               name="interest"
+               value="programming">
+        <label for="programming">Programming</label>
+        <br>
+
+        <input type="checkbox"
+               id="ai"
+               name="interest"
+               value="artificial_intelligence">
+        <label for="ai">Artificial Intelligence</label>
+        <br>
+
+        <input type="checkbox"
+               id="business"
+               name="interest"
+               value="business">
+        <label for="business">Business & Management</label>
+        <br>
+
+        <input type="checkbox"
+               id="science"
+               name="interest"
+               value="science">
+        <label for="science">Science & Research</label>
+
+        <br><br>
+
+        <h3>7. Permanent Address</h3>
+
+        <label for="address">Permanent Address:</label>
+        <br>
+
+        <textarea id="address"
+                  name="permanent_address"
+                  rows="6"
+                  cols="50"
+                  placeholder="Enter your complete permanent address"
+                  minlength="10"
+                  maxlength="300"
+                  required></textarea>
+
+        <br><br>
+
+        <h3>8. Admission Document</h3>
+
+        <label for="document">
+            Upload Previous Qualification / Admission Document:
+        </label>
+
+        <input type="file"
+               id="document"
+               name="admission_document"
+               accept=".pdf,.jpg,.jpeg,.png"
+               required>
+
+        <br><br>
+
+        <h3>9. Additional Information</h3>
+
+        <label for="reference">Application Reference Number:</label>
+        <input type="text"
+               id="reference"
+               name="reference_number"
+               value="GLA-2026"
+               readonly>
+
+        <br><br>
+
+        <label for="comments">Additional Comments:</label>
+        <br>
+
+        <textarea id="comments"
+                  name="additional_comments"
+                  rows="5"
+                  cols="50"
+                  maxlength="500"
+                  placeholder="Enter any additional information if required"></textarea>
+
+        <br><br>
+
+        <h3>10. Declaration</h3>
+
+        <p>
+            I declare that the information provided by me in this application form
+            is correct and complete to the best of my knowledge. I understand that
+            providing incorrect information may affect my admission application.
+        </p>
+
+        <input type="checkbox"
+               id="declaration"
+               name="declaration"
+               value="accepted"
+               required>
+
+        <label for="declaration">
+            I agree to the above declaration and consent to the submission of this form.
+        </label>
+
+        <br><br>
+
+        <input type="submit"
+               name="submit_application"
+               value="Submit Application">
+
+        <input type="reset"
+               name="reset_form"
+               value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <h2>Important Information</h2>
+
+    <ul>
+        <li>Fill in all mandatory fields before submitting.</li>
+        <li>Enter accurate academic information.</li>
+        <li>Upload a valid admission document in the accepted format.</li>
+        <li>Keep your application PIN safe.</li>
+        <li>Check all details carefully before submission.</li>
+    </ul>
+
+    <p>
+        For more information, visit the
+        <a href="https://www.gla.ac.in/" target="_blank">
+            GLA University official website
+        </a>
+    </p>
+
+</body>
+</html>
